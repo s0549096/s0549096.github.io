@@ -1,0 +1,23 @@
+[{
+	"name": "Notebook1",
+	"category": "Papier",
+	"price": 50,
+	"available": true,
+	"thumb": "content/img/notebook1.jpg"
+}, {
+	"name": "Notebook2",
+	"category": "Papier",
+	"price": 10,
+	"available": true,
+	"thumb": "content/img/notebook2.jpg"
+}, {
+	"name": "Notebook3",
+	"category": "Papier",
+	"price": 30,
+	"available": false
+}, {
+	"name": "Kugelschreiber",
+	"category": "Stifte",
+	"price": 1000,
+	"available": true
+}]

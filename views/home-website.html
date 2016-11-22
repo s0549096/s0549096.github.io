@@ -1,0 +1,45 @@
+<head>
+	<link href="content/css/stylesWebsite.css" rel="stylesheet" type="text/css" />
+  <link href="content/css/normalize.css" rel="stylesheet" type="text/css" />
+	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+</head>
+
+	<nav id="bootstrapOverride" class="navbar navbar-default navbar-fixed-top" role="navigation">
+		<div class="container-flex">
+			<img class="hidden-xs" id="logoBig" src="content/img/logoGM.png" width="304" height="236" alt="Gute Mine logo">
+			<div class="navbar-header pull-left">
+				<a class="navbar-brand" href="#">
+					<img class="visible-xs" src="content/img/logoGM.png" width="210" height="60" alt="">
+				</a>
+			</div>
+			<div class="navbar-header pull-right">
+				<ul class="nav pull-left" id="menuIcons">
+					<li class="visible-xs pull-left"><a ui-sref=""><span class="glyphicon glyphicon-search"></span></a></li>
+					<li class="visible-xs pull-left"><a ui-sref=""><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
+				</ul>
+				<button type="button" class="navbar-toggle" ng-click="isNavCollapsed = !isNavCollapsed">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
+			<div class="collapse navbar-collapse" uib-collapse="isNavCollapsed">
+				<ul class="nav navbar-nav">
+					<li><a ui-sref="">Neu</a></li>
+					<li><a ui-sref="">Papier</a></li>
+					<li><a ui-sref="">Stifte</a></li>
+					<li><a ui-sref="">Technik</a></li>
+					<li><a ui-sref="">Zubehör</a></li>
+					<li><a ui-sref="">Geschenke</a></li>
+					<li class="hidden-xs"><a ui-sref="">|</a></li>
+					<li class="hidden-xs"><a ui-sref=""><span class="glyphicon glyphicon-search"></span>   Suche</a></li>
+					<li class="hidden-xs"><a ui-sref=""><span class="glyphicon glyphicon-shopping-cart"></span>   Warenkorb</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+<div ui-view>
+
+</div>
