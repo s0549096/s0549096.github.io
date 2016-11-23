@@ -78,8 +78,12 @@
     }
 
     .navbar-collapse {
-      clear: left;
+      clear: right;
     }
+
+      .navbar-nav li {
+        font-size: 80%;
+      }
 
 }
 
@@ -110,4 +114,19 @@
     margin-bottom: -30px;
   }
 
+}
+
+@media (min-width: 768px) and (max-width: 1000px){
+  #logoBig {
+    padding-top: 10px;
+  }
+
+  #bootstrapOverride li a {
+    font-size: 90%;
+  }
+
+  .navbar-nav li {
+    margin-top: 5px;
+    margin-bottom: -30px;
+  }
 }
