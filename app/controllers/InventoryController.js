@@ -1,9 +1,35 @@
-webShop.controller('InventoryController', ['$scope', '$http','$uibModal', '$log', function($scope, $http, $uibModal, $log){
+webShop.controller('InventoryController', ['$scope', '$http', '$uibModal', '$log', function($scope, $http, $uibModal, $log){
 
   $scope.removeArticle = function(article) {
     var removedArticle = $scope.inventory.indexOf(article);
     $scope.inventory.splice(removedArticle, 1);
   };
+
+//Artikel hinzufuegen Modal
+$scope.open = function (size) {
+
+  var modalInstance = $uibModal.open({
+    animation: true,
+    ariaLabelledBy: 'modal-title',
+    ariaDescribedBy: 'modal-body',
+    templateUrl: 'views/adminViews/manage-articles.new.html',
+    controller: function($scope, $uibModalInstance){
+      $scope.ok = function () {
+        $uibModalInstance.close();
+      };
+
+      $scope.cancel = function () {
+        $uibModalInstance.dismiss('cancel');
+      };
+    },
+    size: size,
+  });
+
+  modalInstance.result.then(function (selectedItem) {
+  }, function () {
+    $log.info('Modal dismissed at: ' + new Date());
+  });
+};
 
   $scope.addArticle = function(){
     $scope.inventory.push({
@@ -22,7 +48,7 @@ webShop.controller('InventoryController', ['$scope', '$http','$uibModal', '$log'
 
   };
 
-  $scope.editArticle = function(article) {
+    $scope.editArticle = function(article) {
     $scope.editProduct = true;
     $scope.existingArticle = article;
   };
