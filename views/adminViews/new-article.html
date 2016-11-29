@@ -4,7 +4,7 @@
 </div>
 <div class="modal-body" id="modal-body">
 
-  <form name="addArticleForm" ng-hide="editProduct" novalidate>
+  <form name="addArticleForm" novalidate>
     <input type="text" placeholder="Name" name="name" ng-model="newArticle.name" ng-required="true" />
     <div ng-show="addArticleForm.name.$touched && addArticleForm.name.$invalid"
       <small style="color:red; display: block; text-align: center;"> Gültigen Namen eingeben </small>
@@ -37,6 +37,6 @@
 <div class="modal-footer">
   <!-- <input type="submit" value="Artikel hinzufügen" ng-disabled="addArticleForm.$invalid" ng-click="ok()"/> -->
     <button class="btn btn-default" type="button" ng-click="addArticle();ok()" ng-disabled="addArticleForm.$invalid">Artikel hinzufügen</button>
-    <button class="btn btn-default" type="button" ng-click="cancel()">Cancel</button>
+    <button class="btn btn-default" type="button" ng-click="cancel()">Schließen</button>
 </div>
 </div>

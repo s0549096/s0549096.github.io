@@ -50,7 +50,7 @@ $scope.editArticle = function (size, selectedArticle) {
       $scope.article = article;
 
       $scope.ok = function () {
-        $uibModalInstance.close();
+        $uibModalInstance.close($scope.article);
       };
 
       $scope.cancel = function () {
