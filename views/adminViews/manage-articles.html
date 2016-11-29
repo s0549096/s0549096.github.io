@@ -8,7 +8,7 @@
            ng-show="article.thumb"/>
       <h3>{{article.name}} - {{article.price | currency: '€'}}</h3>
       <div class="remove" ng-click="removeArticle(article)">x</div>
-      <div class="edit" ng-click="editArticle(article)">#</div>
+      <div class="edit" ng-click="editArticle('lg', article)">#</div>
       <span class="category">{{article.category}}</span>
     </li>
   </ul>

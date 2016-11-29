@@ -38,40 +38,33 @@ $scope.createArticle = function (size) {
     });
   };
 
-//Artikel bearbeiten Modal
-// $scope.editArticle = function (size) {
-//
-//   var modalInstance = $uibModal.open({
-//     animation: true,
-//     ariaLabelledBy: 'modal-title',
-//     ariaDescribedBy: 'modal-body',
-//     templateUrl: 'views/adminViews/edit-article.html',
-//     controller: function($scope, $uibModalInstance, article){
-//       $scope.existingArticle = article;
-//
-//       $scope.ok = function () {
-//         $uibModalInstance.close($scope.existingArticle);
-//       };
-//
-//       $scope.cancel = function () {
-//         $uibModalInstance.dismiss('cancel');
-//       };
-//     },
-//     size: size,
-//   });
-// };
+// Artikel bearbeiten Modal
+$scope.editArticle = function (size, selectedArticle) {
 
+  var modalInstance = $uibModal.open({
+    animation: true,
+    ariaLabelledBy: 'modal-title',
+    ariaDescribedBy: 'modal-body',
+    templateUrl: 'views/adminViews/edit-article.html',
+    controller: function($scope, $uibModalInstance, article){
+      $scope.article = article;
 
-  //   $scope.editArticle = function(article) {
-  //   $scope.editProduct = true;
-  //   $scope.existingArticle = article;
-  // };
-  //
-  // $scope.saveArticle = function () {
-  //   $scope.existingArticle = {};
-  //   $scope.editProduct = false;
-  // };
+      $scope.ok = function () {
+        $uibModalInstance.close();
+      };
 
+      $scope.cancel = function () {
+        $uibModalInstance.dismiss('cancel');
+      };
+    },
+    size: size,
+    resolve: {
+      article: function () {
+        return selectedArticle;
+      }
+    }
+  });
+};
 
 //get test data
   $http.get('data/inventory.json').success(function(data){

@@ -4,12 +4,12 @@
 <div class="modal-body" id="modal-body">
   <div class="content">
 
-<form name="editArticleForm" ng-if="editProduct" novalidate>
-  <input type="text" placeholder="Name" name="name" ng-model="existingArticle.name" ng-required="true" />
+<form name="editArticleForm" novalidate>
+  <input type="text" placeholder="Name" name="name" ng-model="article.name" ng-required="true" />
   <div ng-show="editArticleForm.name.$touched && editArticleForm.name.$invalid"
     <small style="color:red; display: block; text-align: center;"> Gültigen Namen eingeben </small>
   </div>
-  <input type="text" placeholder="Kategorie" name="category" ng-model="existingArticle.category" ng-required="true" />
+  <input type="text" placeholder="Kategorie" name="category" ng-model="article.category" ng-required="true" />
   <!-- <select name="category" ng-model="newArticle.name" ng-required="true" />
     <option selected hidden>Kategorie wählen</option>
     <option value="paper">Papier</option>
@@ -18,7 +18,7 @@
   <div ng-show="editArticleForm.category.$touched && editArticleForm.category.$invalid"
     <small style="color:red; display: block; text-align: center;"> Gültige Kategorie eingeben </small>
   </div>
-  <input type="text" placeholder="Preis" name="price" ng-model="existingArticle.price" ng-required="true" />
+  <input type="text" placeholder="Preis" name="price" ng-model="article.price" ng-required="true" />
   <div ng-show="editArticleForm.price.$touched && editArticleForm.price.$invalid"
     <small style="color:red; display: block; text-align: center;"> Gültigen Preis eingeben </small>
   </div>
