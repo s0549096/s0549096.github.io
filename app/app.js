@@ -54,9 +54,16 @@ webShop.config(['$stateProvider', '$urlRouterProvider', function($stateProvider,
       })
 
       .state('private.admin.inventory.add', {
-          templateUrl:'views/adminViews/manage-articles.new.html',
-          controller: 'InventoryController'
+          templateUrl:'views/adminViews/new-article.html',
+          controller: 'InventoryController',
+          parent: 'private.admin.inventory'
         })
+
+        .state('private.admin.inventory.edit', {
+            templateUrl:'views/adminViews/edit-article.html',
+            controller: 'InventoryController',
+            parent: 'private.admin.inventory'
+          })
 
       .state('private.admin.member', {
           url: '/mitarbeiter-verwalten',
